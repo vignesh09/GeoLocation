@@ -1,0 +1,30 @@
+/******
+Author :vignesh
+Date: Saturday nov 26,2016.
+
+
+*****/
+
+
+body{
+  margin: 0;
+}
+
+.abstract-user{
+  width: 70px;
+  height:70px;
+}
+
+#map {
+        height: 80%;
+        width: 100%;
+       }
+.card-content{
+  padding: 5px!important;
+}
+
+
+.vertical_divider{
+  margin-left: 3%;
+ border-right: 2px inset black;
+}

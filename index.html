@@ -1,0 +1,162 @@
+<html>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Geo location tagging.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+
+<title>Geo Location</title>
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+       <link rel="stylesheet" href="style.css" >
+
+
+<body>
+<!--HEADER-->
+<div class="Header-page">
+<nav>
+  <div class="nav-wrapper grey darken-5">
+
+    <button class="btn-flat btn-large waves-effect waves-light grey menu_header" data-activates="slide-out" id="menu_header">
+    <i class="material-icons left">menu</i>
+  </button>
+
+  <a href="#!" class="brand-logo"><i class="material-icons">map</i>Geo Location</a>
+
+    <ul class="right">
+      <li><i class="material-icons grey">account_circle</i></li>
+      <li><a href="#modal_login" id="SignUp">Sign Up/Sign In</a></li>
+      <li><a href="#"></a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+
+<!---END HEADER-->
+
+<div class="container">
+
+  <!---SLIDER MENU---->
+  <ul class="side-nav" id="slide-out">
+    <li><div class="userView">
+      <div class="background">
+        <img src="images/slide01.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="images/tv-on.jpg"></a>
+      <a href="#SigIn"  ><span class="black-text name">Sign in to your account</span></a>
+      <a href="#!email"><span class="black-text email hide">jdandturk@gmail.com</span></a>
+    </div></li>
+   <li><a class="subheader" href="#!">Home</a></li>
+    <li><a class="subheader" href="#!">About</a></li>
+     <li><a class="subheader" href="#!">Contact Us</a></li>
+
+  </ul>
+
+  <!-----END SLIDER MENU------->
+
+
+<!----------------------------MODAL-------------------------------------------------->
+<!-- Modal Structure -->
+  <div id="modal_login" class="modal card grey lighten-3">
+    <div class="modal-content">
+      <h4 class="center-align grey-text">Sign In / Sign Up</h4>
+      <div class="row">
+        <div class="input-field col s4">
+          <input placeholder="First Name" id="First_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <input placeholder="Last Name" id="Last_name" type="text" class="validate">
+        </div>
+      <div class="col s1 offset-s1">  <a class="btn-floating btn-large waves-effect waves-light grey ">
+    <i class="material-icons ">send</i>
+  </a>
+       </div>
+</div>
+  </div>
+
+  <div class="modal-footer">
+      <a href="#modal_login_social" class=" modal-action modal-close waves-effect waves-green btn-flat">Social logins</a>
+    </div>
+</div>
+
+<!--------------------------Social logins------------------------------------------------------------------->
+<div id="modal_login_social" class="modal card grey lighten-2">
+  <div class="modal-content">
+    <h4 class="center-align grey-text">Social Logins</h4>
+    <div class="row">
+      <div class="col s4">
+      <a class="btn waves-effect waves-light grey lighten-1">Google Account</a>
+      </div>
+      <div class="col s4">
+        <a class="btn waves-effect waves-light grey lighten-1">Facebook Account</a>
+      </div>
+      <div class="col s4">
+
+  <a class="btn waves-effect waves-light grey lighten-1">Twitter Account</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<!-----------------------------END MODAL----------------------------------------------------->
+
+  <div class="row">
+    <form class="col s12">
+      <div class="row valign-wrapper">
+        <div class="input-field col s4">
+          <input placeholder="From" id="From" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <input placeholder="To" id="To" type="text" class="validate">
+        </div>
+      <div class="col s1 offset-s1">  <a class="btn-floating btn-large waves-effect waves-light grey ">
+    <i class="material-icons ">send</i>
+  </a>
+       </div>
+    </form>
+  </div>
+</div>
+<!------------------------GOOGLE MAP-------------------------------->
+<div class="row">
+  <div class="col s12 m12">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+  <div id="map"></div>
+</div>
+</div>
+</div>
+ <script>
+        function initMap(lt=-25.363,ln=131.044) {
+          var uluru = {lat: lt, lng: ln};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+          });
+          var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+          });
+        }
+      </script>
+
+</div>
+<!-------------------------END GOOGLE MAP------------------------------->
+
+<!--Import all the scripts here-->
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script></body>
+<script src="app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHGkBU1ntb0w5rO29MeXw-OeP-CE0gM9o&callback=initMap">
+</script>
+
+</html>
