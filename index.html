@@ -14,30 +14,27 @@
 
 
 <body>
-<!--HEADER-->
-<div class="Header-page">
-<nav>
-  <div class="nav-wrapper grey darken-5">
+  <!--HEADER-->
+  <div class="Header-page">
+  <div class="row nav_bar valign-wrapper grey darken-5">
+    <div class="col s4 l2 m2 waves-effect center waves-light white-text ">
 
-    <button class="btn-flat btn-large waves-effect waves-light grey menu_header" data-activates="slide-out" id="menu_header">
-    <i class="material-icons left">menu</i>
-  </button>
+       <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons  white-text">menu</i></a></div>
 
-  <a href="#!" class="brand-logo"><i class="material-icons">map</i>Geo Location</a>
+      <div class="col s1 l1 m2 right push-m1 push-s1 push-l1 white-text"><i class="material-icons">map</i></div>
+      <div class="col s12 l6 m4 center white-text">Geo Location</div>
 
-    <ul class="right">
-      <li><i class="material-icons grey">account_circle</i></li>
-      <li><a href="#modal_login" id="SignUp">Sign Up/Sign In</a></li>
-      <li><a href="#"></a></li>
-    </ul>
+        <div class="col s2 l2 m2 push-m1 offset-m2 push-s1 offset-s2 offset-l2 push-l1 right white-text"><i class="material-icons valign_wrapper" >account_circle</i></div>
+          <div class="col s12 l6 m4 center white-text">
+            <a href="#modal_login" class=" white-text text-darken-2" id="SignUp">Login/Register</a></div>
   </div>
-</nav>
-</div>
+  </div>
 
 
-<!---END HEADER-->
+  <!---END HEADER-->
 
-<div class="container">
+
+
 
   <!---SLIDER MENU---->
   <ul class="side-nav" id="slide-out">
@@ -87,15 +84,18 @@
   <div class="modal-content">
     <h4 class="center-align grey-text">Social Logins</h4>
     <div class="row">
-      <div class="col s4">
-      <a class="btn waves-effect waves-light grey lighten-1">Google Account</a>
+      <div class="col s12 m12 l4">
+      <a class="col s12 btn waves-effect waves-light grey lighten-1">Google Account</a>
       </div>
-      <div class="col s4">
-        <a class="btn waves-effect waves-light grey lighten-1">Facebook Account</a>
+      <div class="row col s12 hide-on-large-only"></div>
+      <div class="col s12 m12 l4">
+        <a class="col s12 btn waves-effect waves-light grey lighten-1">Facebook Account</a>
       </div>
-      <div class="col s4">
+      <div class="row col s12 hide-on-large-only"></div>
 
-  <a class="btn waves-effect waves-light grey lighten-1">Twitter Account</a>
+      <div class="col s12 m12 l4">
+
+  <a class="col s12 btn waves-effect waves-light grey lighten-1">Twitter Account</a>
 </div>
 </div>
 </div>
@@ -108,15 +108,15 @@
 <!-----------------------------END MODAL----------------------------------------------------->
 
   <div class="row">
-    <form class="col s12">
+    <form class="col s12 m12 l12">
       <div class="row valign-wrapper">
-        <div class="input-field col s4">
+        <div class="input-field col m5 l3 s5">
           <input placeholder="From" id="From" type="text" class="validate">
         </div>
-        <div class="input-field col s4">
+        <div class="input-field col m5 l3 s5">
           <input placeholder="To" id="To" type="text" class="validate">
         </div>
-      <div class="col s1 offset-s1">  <a class="btn-floating btn-large waves-effect waves-light grey ">
+      <div class="col s2 m2 l2 ">  <a class="btn-floating btn-large waves-effect waves-light grey ">
     <i class="material-icons ">send</i>
   </a>
        </div>
@@ -136,7 +136,7 @@
         function initMap(lt=-25.363,ln=131.044) {
           var uluru = {lat: lt, lng: ln};
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
+            zoom: 12                                                              ,
             center: uluru
           });
           var marker = new google.maps.Marker({
