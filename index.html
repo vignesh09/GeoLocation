@@ -61,21 +61,21 @@
     <div class="modal-content">
       <h4 class="center-align grey-text">Sign In / Sign Up</h4>
       <div class="row">
-        <div class="input-field col s4">
-          <input placeholder="First Name" id="First_name" type="text" class="validate">
+        <div class="input-field col s12 m12 l4">
+          <input placeholder="Enter your email id" id="email" type="text">
         </div>
-        <div class="input-field col s4">
-          <input placeholder="Last Name" id="Last_name" type="text" class="validate">
+        <div class="input-field col s12 m12 l4">
+          <input placeholder="Password" id="password" type="text" >
         </div>
-      <div class="col s1 offset-s1">  <a class="btn-floating btn-large waves-effect waves-light grey ">
-    <i class="material-icons ">send</i>
+      <div class="col s12 m12 l4 center">  <a class="btn-floating btn-large waves-effect waves-light grey" onclick="get_auth()">
+    <i class="material-icons">send</i>
   </a>
        </div>
 </div>
   </div>
 
   <div class="modal-footer">
-      <a href="#modal_login_social" class=" modal-action modal-close waves-effect waves-green btn-flat">Social logins</a>
+      <a href="#modal_login_social" class="col s12 modal-action modal-close waves-effect waves-green btn-flat">Social logins</a>
     </div>
 </div>
 
@@ -85,17 +85,17 @@
     <h4 class="center-align grey-text">Social Logins</h4>
     <div class="row">
       <div class="col s12 m12 l4">
-      <a class="col s12 btn waves-effect waves-light grey lighten-1">Google Account</a>
+      <a class="col s12 btn waves-effect waves-light grey lighten-1" onclick="google_auth()">Google Account</a>
       </div>
       <div class="row col s12 hide-on-large-only"></div>
       <div class="col s12 m12 l4">
-        <a class="col s12 btn waves-effect waves-light grey lighten-1">Facebook Account</a>
+        <a class="col s12 btn waves-effect waves-light grey lighten-1" onclick="facebook_auth()">Facebook Account</a>
       </div>
       <div class="row col s12 hide-on-large-only"></div>
 
       <div class="col s12 m12 l4">
 
-  <a class="col s12 btn waves-effect waves-light grey lighten-1">Twitter Account</a>
+  <a class="col s12 btn waves-effect waves-light grey lighten-1" onclick="twitter_auth()">Twitter Account</a>
 </div>
 </div>
 </div>
@@ -116,7 +116,7 @@
         <div class="input-field col m5 l3 s5">
           <input placeholder="To" id="To" type="text" class="validate">
         </div>
-      <div class="col s2 m2 l2 ">  <a class="btn-floating btn-large waves-effect waves-light grey ">
+      <div class="col s2 m2 l2 ">  <a class="btn-floating btn waves-effect waves-light grey ">
     <i class="material-icons ">send</i>
   </a>
        </div>
